@@ -1,5 +1,5 @@
-# Binary-Sorting-Algorithm
-Trying out my first sorting algorithm
+# Binary-Search
+Trying out my first search algorithm
 
 I've done some reading on the binary search algorithm to discover how similar it is to different numerical methods that I learned in engineering school.  Instead of using mathematical functions, these sorting algorithms are concerned with more general forms of information such as strings.
 
