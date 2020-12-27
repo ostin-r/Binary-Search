@@ -5,7 +5,7 @@ I've done some reading on the binary search algorithm to discover how similar it
 
 My plan for this project is to:
 - learn what I can about search algorithms
-- implement a binary sorting function for a numbered list
+- implement a binary search function for an ordered list
 - compare my solution to solutions offered by professionals on the interwebs
 
 So far I have learned about "time complexity" which is a comparison of rates of input & computations required by the algorithm.  This is represented by an "O" followed by the n-complexity relationship.  A linear relationship between input and time complexity is O(n).
