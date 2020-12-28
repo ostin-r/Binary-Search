@@ -14,7 +14,7 @@ def search_numb(search_val, vec):
     center_val = 0
     n = float('Inf')
 
-    while center_val != search_val or n > 1:
+    while center_val != search_val:
         n          = len(vec)
         center     = int(np.floor(n/2))
         center_val = int(vec[center])
