@@ -1,5 +1,7 @@
 # Binary-Search
-Trying out my first search algorithm
+Trying out my first search algorithm.
+
+I tried to change the description of this repository, but I think it is stuck saying that I'm trying my first sorting algorithm.  I'll figure out how to make those next.
 
 I've done some reading on the binary search algorithm to discover how similar it is to different numerical methods that I learned in engineering school.  Instead of using mathematical functions, these sorting algorithms are concerned with more general forms of information such as strings.
 
