@@ -11,37 +11,34 @@ def search_numb(search_val, vec):
     outputs:
         center: location of the value
     '''
+    n          = float('Inf')
     center_val = 0
-    n = float('Inf')
+    loc        = np.arange(len(vec))
 
     while center_val != search_val:
         n          = len(vec)
         center     = int(np.floor(n/2))
         center_val = int(vec[center])
-        print(center_val)
-        print(search_val)
 
         if search_val < center_val:
             vec = vec[0:center]
+            loc = loc[0:center]
         else:
             vec = vec[center:n]
-        print(vec)
+            loc = loc[center:n]
     
     if center_val == search_val:
-        return center
+        return loc[0]
     else:
         return 'value not in list'
 
 
 # generate the (sorted) list
-n   = 10
-lis = np.zeros(n)
+loc        = np.arange(0,11)
+lis        = np.arange(0,11)
+search_val = 10
+print(loc)
+print(lis)
 
-for i in range(0,n):
-    lis[i] = ( i + 1 ) * 2  # every other value up to 2n starting with 2
-
-search_val = 16  # search value
-
-# call the function
 a = search_numb(search_val, lis)
 print(a)
