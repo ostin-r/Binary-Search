@@ -11,15 +11,17 @@ def search_numb(search_val, vec):
     outputs:
         center: location of the value
     '''
-    n          = len(vec)
-    center_val = 0
-    loc        = np.arange(len(vec))
-    max_val    = np.max(vec)
+    n          = len(vec)               # initialize vector length req'd for loop
+    center_val = -float('Inf')          # initialize center_val to force while loop to begin 
+    loc        = np.arange(len(vec))    # vector to track location as vec gets split
+    max_val    = np.max(vec)            
     min_val    = np.min(vec)
 
+    # check value is in the sorted list
     if search_val > max_val or search_val < min_val:
         return 'value not in list'
 
+    # continue to split the list until the center value is what we are searching for
     while center_val != search_val:
         n          = len(vec)
         center     = int(np.floor(n/2))
@@ -37,11 +39,9 @@ def search_numb(search_val, vec):
 
     return loc[0]
 
-
 # generate the (sorted) list
 lis        = np.arange(0,22,2)
-search_val = 11
-print(lis)
+search_val = 12
 
 a = search_numb(search_val, lis)
 print(a)
