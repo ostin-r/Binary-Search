@@ -39,6 +39,32 @@ def search_numb(search_val, vec):
 
     return loc[0]
 
+def pro_search(search_val, vec):
+    '''
+    After glancing over the solution for binary search offered on geekstogeeks.com,
+    I attempt to implement it here from memory.  This function, compared to my function
+    search_numb, is less complex.  This is because it changes the index of the array
+    to search rather than "cutting" it as it searches.
+    '''
+    # get the min and max indeces
+    lo = 0
+    hi = len(vec) - 1
+
+    # create loop that continues until len(vec) = 0
+    while lo <= hi:
+
+        mid = (hi + lo)//2 # get the midpoint index value, default to floor if even array
+        mid_val = vec[mid] # get the value at the midpoint
+        
+        if search_val > mid_val:
+            lo = mid
+
+        elif search_val < mid_val:
+            hi = mid
+        
+        else:
+            return mid
+
 # generate the (sorted) list
 lis        = np.arange(0,22,2)
 search_val = 12
