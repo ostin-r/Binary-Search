@@ -3,12 +3,14 @@ Trying out my first search algorithm.
 
 I've done some reading on the binary search algorithm to discover how similar it is to different numerical methods that I learned in engineering school.  Instead of using mathematical functions, these sorting algorithms are concerned with more general forms of information such as strings.
 
+For those who don't know, binary search is an algorithm used to find a value in a sorted array quickly.  Instead of checking every value, binary search just checks the middle value and if the search value is greater then only the upper half of the array is checked.  If the search value is less than the middle value, then the lower half of the array is checked.  This is repeated until the search value is found.
+
 My plan for this project is to:
 - learn what I can about the binary search algorithm
 - implement a binary search function for ordered lists
 - compare my solution to solutions offered by professionals on the interwebs
 
-So far I have learned about "time complexity" which is a comparison of rates of input & computations required by the algorithm.  This is represented by an "O" followed by the n-complexity relationship.  A linear relationship between input and time complexity is O(n).  In addition, it seems natural that sorting algorithms would be the next thing that I should study.  Maybe I'll add a solution for one of those to this project.
+So far I have learned about "time complexity" which is a comparison of rates of input & computations required by the algorithm.  This is represented by an "O" followed by the n-complexity relationship.  A linear relationship between input and time complexity is O(n).  The time complexity of binary search is O(logn)  In addition, it seems natural that sorting algorithms would be the next thing that I should study.  Maybe I'll add a solution for one of those to this project.
 
 Update 12/30/20:
 
