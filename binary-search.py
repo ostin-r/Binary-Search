@@ -72,6 +72,7 @@ def pro_search(search_val, vec):
 lis        = np.arange(0,22,2)
 search_val = 6
 
+# test it out
 a = search_numb(search_val, lis)
 print(a)
 b = pro_search(search_val, lis)
