@@ -19,7 +19,7 @@ def search_numb(search_val, vec):
 
     # check value is in the sorted list
     if search_val > max_val or search_val < min_val:
-        return 'value not in list'
+        return 'value not in array'
 
     # continue to split the list until the center value is what we are searching for
     while center_val != search_val:
@@ -35,39 +35,44 @@ def search_numb(search_val, vec):
             loc = loc[center:n]
 
         if n < 2 and center_val != search_val:
-            return 'value not in list'
+            return 'value not in array'
 
     return loc[0]
 
 def pro_search(search_val, vec):
     '''
-    After glancing over the solution for binary search offered on geekstogeeks.com,
-    I attempt to implement it here from memory.  This function, compared to my function
-    search_numb, is less complex.  This is because it changes the index of the array
-    to search rather than "cutting" it as it searches.
+    This is just a copy of the solution for binary search from geekstogeeks.com that
+    I typed up to make sure that I fully understand how it works. 
+    This function, compared to my function search_numb, is much less complex.  
+    This is because it changes the index of the array to search rather than "cutting" 
+    it as it searches like my function search_numb above.
     '''
     # get the min and max indeces
     lo = 0
     hi = len(vec) - 1
 
-    # create loop that continues until len(vec) = 0
+    # create loop that continues until the search area is 0 terms
     while lo <= hi:
 
-        mid = (hi + lo)//2 # get the midpoint index value, default to floor if even array
+        mid = (hi + lo)//2 # get the midpoint index value, default to floor if even length array
         mid_val = vec[mid] # get the value at the midpoint
         
-        if search_val > mid_val:
-            lo = mid
-
-        elif search_val < mid_val:
-            hi = mid
+        if search_val > mid_val: # if search val is greater than midpoint, search higher half of array
+            lo = mid + 1         # incriment up 1 from mid to search only what hasn't been searched
         
-        else:
+        elif search_val < mid_val: # if search val is less than midpoint, searvh lower half of array
+            hi = mid - 1           # incriment down 1 from mid to search only what hasn't been searched
+        
+        else:                      # search_val == mid_val in this case, return location
             return mid
+    
+    return 'value not in array'
 
 # generate the (sorted) list
 lis        = np.arange(0,22,2)
-search_val = 12
+search_val = 6
 
 a = search_numb(search_val, lis)
 print(a)
+b = pro_search(search_val, lis)
+print(b)
